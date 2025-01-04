@@ -10,7 +10,7 @@ public class JavaUtility {
 
 	public int getRandomNumber() {
 		Random random = new Random();
-		return random.nextInt(1000);
+		return random.nextInt(100000);
 	}
 	
 	public StringBuilder getRandomPhoneNumber() {
