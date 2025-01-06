@@ -106,7 +106,7 @@
 		</dependency>
 
 	</dependencies>
-	
+
 	<profiles>
 		<profile>
 			<id>SmokeTesting</id>
@@ -135,7 +135,7 @@
 						<version>3.5.2</version>
 						<configuration>
 							<suiteXmlFiles>
-								<suiteXmlFile>SmokeGroupExecution.xml</suiteXmlFile>
+								<suiteXmlFile>RegressionGroupExecution.xml</suiteXmlFile>
 							</suiteXmlFiles>
 						</configuration>
 					</plugin>

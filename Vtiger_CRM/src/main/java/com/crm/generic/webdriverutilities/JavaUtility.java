@@ -12,35 +12,51 @@ public class JavaUtility {
 		Random random = new Random();
 		return random.nextInt(100000);
 	}
-	
+
 	public StringBuilder getRandomPhoneNumber() {
 		Random random = new Random();
 		int firstdigit = random.nextInt(4) + 6;
 		StringBuilder mobilenumber = new StringBuilder();
 		mobilenumber.append(firstdigit);
-		for(int i=0;i<9;i++) {
+		for (int i = 0; i < 9; i++) {
 			mobilenumber.append(random.nextInt(10));
 		}
 		return mobilenumber;
 	}
-	
+
 	public String getLocalDateTime() {
 		return LocalDateTime.now().toString().replace(":", "-");
 	}
-	
+
 	public String getSystemDate() {
 		Date date = new Date();
 		SimpleDateFormat simple = new SimpleDateFormat("yyyy-MM-dd");
 		return simple.format(date);
 	}
-	
+
 	public String getCalculatedDate(int days) {
 		Date date = new Date();
 		SimpleDateFormat simple = new SimpleDateFormat("yyyy-MM-dd");
 		simple.format(date);
 		Calendar calendar = simple.getCalendar();
-		calendar.add(Calendar.DAY_OF_MONTH,days);
+		calendar.add(Calendar.DAY_OF_MONTH, days);
 		return simple.format(calendar.getTime());
-		
 	}
+
+	public String getRandomFirstName() {
+		String[] firstNames = { "John", "Emma", "Michael", "Sophia", "William", "Olivia", "James", "Ava", "Ethan","Isabella","Thomas" };
+		Random random = new Random();
+		int randomFirstNameIndex = random.nextInt(firstNames.length);
+		return firstNames[randomFirstNameIndex];
+
+	}
+	
+	public String getRandomLastName() {
+		String[] lastNames = { "Smith", "Johnson", "Williams", "Brown", "Jones", "Garcia", "Miller", "Davis","Martinez", "Hernandez" ,"Shelby","Wick"};
+		Random random = new Random();
+		int randomLastNameIndex = random.nextInt(lastNames.length);
+		return lastNames[randomLastNameIndex];
+
+	}
+
 }
