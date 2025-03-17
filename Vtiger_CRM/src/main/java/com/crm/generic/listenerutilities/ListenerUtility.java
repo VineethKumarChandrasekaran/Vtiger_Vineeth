@@ -34,7 +34,7 @@ public class ListenerUtility implements ITestListener, ISuiteListener, IRetryAna
 		spark.config().setReportName("V_Tiger Module Report");
 		extentreports = new ExtentReports();
 		extentreports.attachReporter(spark);
-		extentreports.setSystemInfo(null, null);
+		//extentreports.setSystemInfo(null, null);
 	}
 	
 	@Override
